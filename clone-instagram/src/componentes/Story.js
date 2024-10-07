@@ -1,12 +1,12 @@
-export default function Story() {
+export default function Story(props) {
     return (
         <div className='Story'>
             <div className='imagem-do-usuario'>
-                <img src='https://picsum.photos/200/300' alt='Imagem do usuário'/>
+                <img src={props.foto} alt={props.nome}/>
             </div>
-            
+
             <div className='nome-do-usuario'>
-                <span>sleeap</span>
+                <span>{props.nome}</span>
             </div>
         </div>
     );
